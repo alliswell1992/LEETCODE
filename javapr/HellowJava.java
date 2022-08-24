@@ -9,7 +9,7 @@ package javapr;
  * @Author: Liu Li liuliwoku1@163.com
  * @Date: 2022-08-21 16:29:55
  * @LastEditors: Liu Li liuliwoku1@163.com
- * @LastEditTime: 2022-08-24 17:07:34
+ * @LastEditTime: 2022-08-24 18:19:06
  * @FilePath: \leetcode\javapr\HellowJava.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -295,7 +295,10 @@ public class HellowJava {
         // s1.staticField = 3;
         // System.out.println(s.staticField);
         // System.out.println(s1.staticField);
-
+        Person3 p = new Student("name");
+        // Person3.gender = 2;
+        System.out.println(Person3.gender);
+        Person3.staticMethod();
     }
 }
 
@@ -386,5 +389,9 @@ interface Person3 {
    default void defaultPerson3() { // default function, subclass don't need override default function , use default function when need to add function to interface otherwise need change all subclass
 
     
+   }
+   public static int gender = 1;
+   public static void staticMethod() {
+        System.out.println("interface static method");
    }
 }
