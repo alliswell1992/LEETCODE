@@ -504,28 +504,28 @@ package javapr.src.test;
 // }
 
 
-// public class HellowJava {
-//         public static void main(String[] args) {
-//             Outer.StaticNested sn = new Outer.StaticNested();
-//             sn.hello();
-//             StaticNested.hello();
-//         }
-//     }
+public class HellowJava {
+        public static void main(String[] args) {
+            Outer.StaticNested sn = new Outer.StaticNested();
+            sn.hello();
+        //     StaticNested.hello();
+        }
+    }
     
-//     class Outer {
-//         private static String NAME = "OUTER";
+    class Outer {
+        private static String NAME = "OUTER";
     
-//         private String name;
+        private String name;
                                         
-//         Outer(String name) {
-//             this.name = name;
-//         }
+        Outer(String name) {
+            this.name = name;
+        }
     
-//         static class StaticNested {
-//                 static void hello() {
-//                          System.out.println("Hello, " + Outer.NAME);
-//             }           
-//         }
-//     }
+        static class StaticNested {
+                static void hello() {
+                         System.out.println("Hello, " + Outer.NAME);
+            }           
+        }
+    }
 
-
+//package javapr.src.test;
