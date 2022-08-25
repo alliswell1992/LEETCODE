@@ -1,4 +1,12 @@
-package javapr.src.test;
+/*
+ * @Author: Liu Li liuliwoku1@163.com
+ * @Date: 2022-08-21 16:29:55
+ * @LastEditors: Liu Li liuliwoku1@163.com
+ * @LastEditTime: 2022-08-25 17:39:44
+ * @FilePath: \javapr\leetcode\com\javapr\test\Main.java
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+package com.javapr.test;
 
 // import javapr.src.test.Outer.StaticNested;
 
@@ -504,28 +512,40 @@ package javapr.src.test;
 // }
 
 
-public class HellowJava {
-        public static void main(String[] args) {
-            Outer.StaticNested sn = new Outer.StaticNested();
-            sn.hello();
-        //     StaticNested.hello();
-        }
-    }
+// public class HellowJava {
+//         public static void main(String[] args) {
+                
+//             Outer.StaticNested sn = new Outer.StaticNested();
+//             sn.hello();
+//         //     StaticNested.hello();
+//         }
+//     }
+                         
+//     class Outer {
+//         private static String NAME = "OUTER";
     
-    class Outer {
-        private static String NAME = "OUTER";
-    
-        private String name;
+//         private String name;
                                         
-        Outer(String name) {
-            this.name = name;
-        }
+//         Outer(String name) {
+//             this.name = name;
+//         }
     
-        static class StaticNested {
-                static void hello() {
-                         System.out.println("Hello, " + Outer.NAME);
-            }           
-        }
-    }
+//         static class StaticNested {
+//                 static void hello() {
+//                          System.out.println("Hello, " + Outer.NAME);
+//             }           
+//         }
+//     }
 
 //package javapr.src.test;
+
+
+// 必须引入java.xml模块后才能使用其中的类:
+import javax.xml.XMLConstants;
+
+public class Main {
+	public static void main(String[] args) {
+		Greeting g = new Greeting();
+		System.out.println(g.hello(XMLConstants.XML_NS_PREFIX));
+	}
+}
