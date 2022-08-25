@@ -1,5 +1,9 @@
 package javapr.src.test;
 
+// import javapr.src.test.Outer.StaticNested;
+
+// import javapr.src.test.Outer.Inner;
+
 // import java.util.ArrayList;
 // import java.util.Collection;
 // import java.util.List;
@@ -9,7 +13,7 @@ package javapr.src.test;
  * @Author: Liu Li liuliwoku1@163.com
  * @Date: 2022-08-21 16:29:55c
  * @LastEditors: Liu Li liuliwoku1@163.com
- * @LastEditTime: 2022-08-25 09:18:03
+ * @LastEditTime: 2022-08-25 11:52:24
  * @FilePath: \leetcode\javapr\HellowJava.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -252,8 +256,8 @@ package javapr.src.test;
     
 // }
 
-public class HellowJava {
-    public static void main(String[] args) {
+// public class HellowJava {
+//     public static void main(String[] args) {
         // Student s = new Student("Xiao Ming", 12, 89);
         // int[] ns = {1,2,3};
         // int[] l = ns.clone(); 
@@ -295,81 +299,81 @@ public class HellowJava {
         // s1.staticField = 3;
         // System.out.println(s.staticField);
         // System.out.println(s1.staticField);
-        Person3 p = new Student("name");
-        // Person3.gender = 2;
-        System.out.println(Person3.gender);
-        Person3.staticMethod();
-    }
-}
+//         Person3 p = new Student("name");
+//         // Person3.gender = 2;
+//         System.out.println(Person3.gender);
+//         Person3.staticMethod();
+//     }
+// }
 
-abstract class Person {
-    public String name;
-    protected int age;
-    public Person(String name) {
-        this.name = name;
-    }
+// abstract class Person {
+//     public String name;
+//     protected int age;
+//     public Person(String name) {
+//         this.name = name;
+//     }
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-    public void run() {
-        System.out.println("Person run");
-    }
-    public final String hello() {
-        return "Hello, Person"; 
-    }
+//     public Person(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     public void run() {
+//         System.out.println("Person run");
+//     }
+//     public final String hello() {
+//         return "Hello, Person"; 
+//     }
     
-    public abstract void abstractRun();
+//     public abstract void abstractRun();
         
     
-}
+// }
 
-class Student extends Person implements Person3{
-    public static int staticField;
-    protected int score;
-    public Student(String name) {
-        super("name");
-        // this.name = name;
+// class Student extends Person implements Person3{
+//     public static int staticField;
+//     protected int score;
+//     public Student(String name) {
+//         super("name");
+//         // this.name = name;
         
-        super.name = name;
-    }
+//         super.name = name;
+//     }
 
-    public Student(String name, int age, int score) {
-        super(name, age);
-        this.score = score;
-    }
+//     public Student(String name, int age, int score) {
+//         super(name, age);
+//         this.score = score;
+//     }
 
-    public static void staticMethod() {
-        System.out.println(Student.staticField);
-    }
-    @Override
-    public void run() {
-        System.out.println("Student run");
-        // return "as";
-    }
+//     public static void staticMethod() {
+//         System.out.println(Student.staticField);
+//     }
+//     @Override
+//     public void run() {
+//         System.out.println("Student run");
+//         // return "as";
+//     }
     
-    public String hello(int i) {
-        return "hello student";
-    }
-    // public void abstractRun() {
-    //     System.out.println("student abstractRun");
-    // }
-    public void run1() {
-        System.out.println("student run1");
-    }
+//     public String hello(int i) {
+//         return "hello student";
+//     }
+//     // public void abstractRun() {
+//     //     System.out.println("student abstractRun");
+//     // }
+//     public void run1() {
+//         System.out.println("student run1");
+//     }
 
-    @Override
-    public void abstractRun() {
-        // TODO Auto-generated method stub
+//     @Override
+//     public void abstractRun() {
+//         
         
-    }
-    @Override
-    public void run3() {
-        // TODO Auto-generated method stub
+//     }
+//     @Override
+//     public void run3() {
+//         
         
-    }
-}
+//     }
+// }
 
 // sealed class Shape permits Rect, Circle, Triangle {
     
@@ -384,14 +388,144 @@ class Student extends Person implements Person3{
 
     
 // }
-interface Person3 {
-   void run3();
-   default void defaultPerson3() { // default function, subclass don't need override default function , use default function when need to add function to interface otherwise need change all subclass
+// interface Person3 {
+//    void run3();
+//    default void defaultPerson3() { // default function, subclass don't need override default function , use default function when need to add function to interface otherwise need change all subclass
 
     
-   }
-   public static int gender = 1;
-   public static void staticMethod() {
-        System.out.println("interface static method");
-   }
-}
+//    }
+//    public static int gender = 1;
+//    public static void staticMethod() {
+//         System.out.println("interface static method");
+//    }
+// }
+
+
+
+// public class HellowJava {
+//         public static void main(String[] args) {
+//             Inner i = new Inner();
+//             i.hi();
+//         }
+    
+//         // private方法:
+//         protected void hello() {
+//             System.out.println("private hello!");
+//         }
+    
+//         // 静态内部类:
+//         static public class Inner {
+//             public void hi() {
+//                 // HellowJava.hello();
+//                 HellowJava h = new HellowJava();
+//                 h.hello();
+//             }
+//         }
+//     }
+
+
+
+// class innerHellowJava {
+//         private static void hi() {
+//                 System.out.println("InnerHellowJava");
+//                 InnerHellowJava_1 i11 = new InnerHellowJava_1();
+//                 i11.hi();
+
+//         }
+//         protected static class InnerHellowJava_1 {
+        
+//                 public void hi() {
+//                         System.out.println("InnerHellowJava_1");
+//                         InnerHellowJava i = new InnerHellowJava();
+//                         i.hi();
+//                         innerHellowJava.hi();
+//                 }
+//         }
+        
+        
+// }
+/**
+ * InnerHellowJava_2
+ */
+// class InnerHellowJava_2 extends innerHellowJava{
+//         public void hi() {
+//                 System.out.println("InnerHellowJava_2");
+//                 InnerHellowJava_1 i1 = new InnerHellowJava_1();
+//                 i1.hi();
+//         }
+        
+// }
+
+
+
+// public class HellowJava {
+//         public static void main(String[] args) {
+//             Outer outer = new Outer("Nested"); // 实例化一个Outer
+//         //     Outer.Inner inner = outer.new Inner(); // 实例化一个Inner
+//         //     Outer.Inner inner1 =  new Inner();
+//             Inner inner = new Inner();
+//             Inner.hello();
+//             inner.hello();
+//         }
+//     }
+    
+//     class Outer {
+//         private String name;
+    
+//         Outer(String name) {
+//             this.name = name;
+//         }
+    
+//         public static class Inner {
+//             private String name;    
+//             static void hello() {
+//                 // this.clone();
+//                 this.name = "as";
+//                 System.out.println("Hello, " + Outer.this.name);
+//             }
+//         }
+//     }
+
+
+// import java.util.HashMap;
+
+// public class HellowJava {
+//     public static void main(String[] args) {
+//         HashMap<String, String> map1 = new HashMap<>();
+//         HashMap<String, String> map2 = new HashMap<>() {}; // 匿名类!
+//         HashMap<String, String> map3 = new HashMap<>() {
+//             {
+//                 put("A", "1");
+//                 put("B", "2");
+//             }
+//         };
+//         System.out.println(map3.get("A"));
+//     }
+// }
+
+
+// public class HellowJava {
+//         public static void main(String[] args) {
+//             Outer.StaticNested sn = new Outer.StaticNested();
+//             sn.hello();
+//             StaticNested.hello();
+//         }
+//     }
+    
+//     class Outer {
+//         private static String NAME = "OUTER";
+    
+//         private String name;
+                                        
+//         Outer(String name) {
+//             this.name = name;
+//         }
+    
+//         static class StaticNested {
+//                 static void hello() {
+//                          System.out.println("Hello, " + Outer.NAME);
+//             }           
+//         }
+//     }
+
+
