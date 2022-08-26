@@ -2,11 +2,14 @@
  * @Author: Liu Li liuliwoku1@163.com
  * @Date: 2022-08-21 16:29:55
  * @LastEditors: Liu Li liuliwoku1@163.com
- * @LastEditTime: 2022-08-25 17:39:44
+ * @LastEditTime: 2022-08-26 15:33:32
  * @FilePath: \javapr\leetcode\com\javapr\test\Main.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 package com.javapr.test;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 // import javapr.src.test.Outer.StaticNested;
 
@@ -541,11 +544,56 @@ package com.javapr.test;
 
 
 // 必须引入java.xml模块后才能使用其中的类:
-import javax.xml.XMLConstants;
+// import javax.xml.XMLConstants;
 
 public class Main {
 	public static void main(String[] args) {
-		Greeting g = new Greeting();
-		System.out.println(g.hello(XMLConstants.XML_NS_PREFIX));
+		// Greeting g = new Greeting();
+		// System.out.println(g.hello(XMLConstants.XML_NS_PREFIX));
+                // String s = new String(new char[] {'a', 'b', 'e'});
+                // System.out.println(s);
+                // String s = "hello";
+                // System.out.println(s);
+                // s = s.toUpperCase();
+                // System.out.println(s);
+                // String s1 = "hello";
+                // String s2 = "hello";
+                // String s2 = "hellO".toLowerCase();
+                // System.out.println(s1 == s2);
+                // System.out.println(s1.equals(s2));
+                // System.out.println("hello".contains("ll"));
+                // System.out.println("\u3000Hello\u3000".trim());
+                // System.out.println("\u3000Hello\u3000".strip());
+                // System.out.println(String.join("***", new String[]{"a", "b","c"}));
+                // System.out.println(String.join("***", new char[] {'a', 'b', 'c'}));
+                // char [] c = new char[] {'a', 'b', 'c'};
+                // String s = "hi %s, your score is %d!";
+                // System.out.println(s.formatted("liuli", 30));
+                // System.out.println(String.format("hi %s, your score is %.2f!",  "liuli", 59.5));
+                /* %s : string
+                 * %d : int
+                 * %x : hexadecimal 
+                 * %f : float 
+                */
+                // System.out.println(String.valueOf(new Object()));
+                // System.out.println(String.valueOf(new String[] {"as","eq"}));
+                // char[] cs = "Hello".toCharArray();
+                // String s = new String(cs);
+                // System.out.println(s);
+                // System.out.println(String.valueOf(cs));
+                // System.out.println(String.valueOf(s));
+                // cs[0] = 'x';
+                // System.out.println(s);
+                // int [] ns = new int[] {1, 2,3};
+                // int[] ns1 = ns.clone();
+                // ns [0] = 4;
+                // System.out.println(Arrays.toString(ns));
+                // System.out.println(Arrays.toString(ns1));
+                // System.out.println(Integer.parseInt(Arrays.toString("A".getBytes(StandardCharsets.UTF_8)),16));
+                // System.out.println(new Character('A').by);
+                // System.out.println(Arrays.toString("A".getBytes(StandardCharsets.UTF_8)));
+                // System.out.println(Integer.parseInt("65", 16));
+                // char i = '中';
+                // System.out.println(String.valueOf(i));
 	}
-}
+}    
